@@ -37,9 +37,18 @@ export function TransactionsTable(): JSX.Element {
             return (
               <tr key={transaction.id}>
                 <td>{transaction.title}</td>
-                <td className={transaction.type}>{transaction.amount}</td>
+                <td className={transaction.type}>
+                  {new Intl.NumberFormat('en-GB', {
+                    style: 'currency',
+                    currency: 'GBP',
+                  }).format(transaction.amount)}
+                </td>
                 <td>{transaction.category}</td>
-                <td>{transaction.createAt}</td>
+                <td>
+                  {new Intl.DateTimeFormat('en-GB').format(
+                    new Date(transaction.createAt),
+                  )}
+                </td>
               </tr>
             );
           })}
