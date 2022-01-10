@@ -12,7 +12,7 @@ export function Header({
     <>
       <Container>
         <Content>
-          <img src={logoImg} alt="Cambridge Judge Business School logo." />
+          <img src={logoImg} alt="Money" />
           <button type="button" onClick={onOpenNewTransactionModal}>
             New Transaction
           </button>
