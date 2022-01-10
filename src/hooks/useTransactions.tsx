@@ -59,7 +59,7 @@ export function TransactionsProvider({
   );
 }
 
-export function useTransactions() {
+export function useTransactions(): TransactionsContextData {
   const context = useContext(TransactionsContext);
 
   return context;
